@@ -165,34 +165,34 @@ class _LoginPageState extends State<LoginPage> {
                           text: "Login ",
                           isLoading: _loginController.isLoading.value,
                           onTap: () async {
-                            if (phoneContr.text == 10 ||
-                                phoneContr.text.isNumericOnly) {
-                              if (passwordContr.text.length > 7) {
-                                Result result =
-                                    await _loginController.userLogin(
-                                  phoneContr.text,
-                                  passwordContr.text,
-                                );
-                              } else {
-                                Get.rawSnackbar(
-                                    message: "Password should be more than 7",
-                                    backgroundColor: AppColors.redColor,
-                                    duration: Duration(seconds: 2),
-                                    animationDuration:
-                                        Duration(milliseconds: 100),
-                                    snackPosition: SnackPosition.BOTTOM);
-                              }
-                            } else {
-                              Get.rawSnackbar(
-                                  message: "Phone number is invalid",
-                                  backgroundColor: AppColors.redColor,
-                                  duration: Duration(seconds: 2),
-                                  animationDuration:
-                                      Duration(milliseconds: 100),
-                                  snackPosition: SnackPosition.BOTTOM);
-                            }
+                            // if (phoneContr.text == 10 ||
+                            //     phoneContr.text.isNumericOnly) {
+                            //   if (passwordContr.text.length > 7) {
+                            //     Result result =
+                            //         await _loginController.userLogin(
+                            //       phoneContr.text,
+                            //       passwordContr.text,
+                            //     );
+                            //   } else {
+                            //     Get.rawSnackbar(
+                            //         message: "Password should be more than 7",
+                            //         backgroundColor: AppColors.redColor,
+                            //         duration: Duration(seconds: 2),
+                            //         animationDuration:
+                            //             Duration(milliseconds: 100),
+                            //         snackPosition: SnackPosition.BOTTOM);
+                            //   }
+                            // } else {
+                            //   Get.rawSnackbar(
+                            //       message: "Phone number is invalid",
+                            //       backgroundColor: AppColors.redColor,
+                            //       duration: Duration(seconds: 2),
+                            //       animationDuration:
+                            //           Duration(milliseconds: 100),
+                            //       snackPosition: SnackPosition.BOTTOM);
+                            // }
 
-                            // Get.toNamed(RouteHelper.getHomeNav());
+                            Get.toNamed(RouteHelper.getHomeNav());
                           },
                         ),
                       ),
